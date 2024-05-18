@@ -2,7 +2,18 @@ import time
 from adafruit_servokit import ServoKit
 kit = ServoKit(channels=16)
 print("Initializing ServoKit")
-i=0
+
+leg_front_left = [1, 3, 5]
+leg_front_right = [2, 4, 6]
+leg_back_left = [15, 13, 11]
+leg_back_right = [14, 12, 10]
+
+# 3 servos in leg, so 3 different degs
+def leg_move(leg, degs):
+    i = 1
+    for servo_nb in leg:
+        kit.servo[servo_nb].angle = degs[i]
+        i+=1
 
 def all_movement(a):
     #left front leg
@@ -26,7 +37,7 @@ def all_movement(a):
     kit.servo[10].angle = a
     time.sleep(2)
 
-
+i=0
 while(i<100):
     all_movement(80)
     #time.sleep(5)
