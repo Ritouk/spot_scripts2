@@ -52,18 +52,22 @@ def get_up(a):
     kit.servo[6].angle = 90
     kit.servo[10].angle = 100
     kit.servo[11].angle = 85
-    time.sleep(1)
+    time.sleep(0.5)
     #forearms
     kit.servo[3].angle = 30
     kit.servo[4].angle = 150
+    time.sleep(0.5)
+    kit.servo[1].angle = 95
+    kit.servo[2].angle = 90
+    time.sleep(0.5)
     kit.servo[13].angle = 40
     kit.servo[12].angle = 135
-    time.sleep(1)
-    #arms
-    kit.servo[1].angle = 90
-    kit.servo[2].angle = 90
+    time.sleep(0.5)
     kit.servo[15].angle = 90
-    kit.servo[14].angle = 90
+    kit.servo[14].angle = 80
+    time.sleep(1)
+
+
     time.sleep(1)
 
 def lie_down(a):
