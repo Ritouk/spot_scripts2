@@ -31,7 +31,7 @@ def rest_mode(a):
     kit.servo[5].angle = 45
     time.sleep(1)
     #right front leg
-    kit.servo[2].angle = a
+    kit.servo[2].angle = 30
     kit.servo[4].angle = 80
     kit.servo[6].angle = 135
     time.sleep(1)
@@ -41,37 +41,37 @@ def rest_mode(a):
     kit.servo[11].angle = 40
     time.sleep(1)
     #right back leg
-    kit.servo[14].angle = a
+    kit.servo[14].angle = 30
     kit.servo[12].angle = 80
     kit.servo[10].angle = 135
     time.sleep(1)
 
 def get_up(a):
     #shoulders
-    kit.servo[5].angle = 110
+    kit.servo[5].angle = 100
     kit.servo[6].angle = 90
-    kit.servo[10].angle = 90
-    kit.servo[11].angle = 90
+    kit.servo[10].angle = 100
+    kit.servo[11].angle = 85
     time.sleep(1)
     #forearms
-    kit.servo[3].angle = 45
-    kit.servo[4].angle = 135
+    kit.servo[3].angle = 30
+    kit.servo[4].angle = 150
     kit.servo[13].angle = 40
     kit.servo[12].angle = 135
     time.sleep(1)
     #arms
-    kit.servo[1].angle = 70
-    kit.servo[2].angle = a
-    kit.servo[15].angle = 55
-    kit.servo[14].angle = a
+    kit.servo[1].angle = 90
+    kit.servo[2].angle = 90
+    kit.servo[15].angle = 90
+    kit.servo[14].angle = 90
     time.sleep(1)
 
 def lie_down(a):
     #arms
     kit.servo[1].angle = 15
-    kit.servo[2].angle = a
+    kit.servo[2].angle = 180
     kit.servo[15].angle = 0
-    kit.servo[14].angle = a
+    kit.servo[14].angle = 170
     time.sleep(1)
     #forearms
     kit.servo[3].angle = 100
@@ -81,6 +81,46 @@ def lie_down(a):
     time.sleep(1)
     #shoulders
     kit.servo[5].angle = 45
-    kit.servo[6].angle = 135
-    kit.servo[10].angle = 135
+    kit.servo[6].angle = 140
+    kit.servo[10].angle = 140
     kit.servo[11].angle = 40
+
+def lie_down2(a):
+    #arms
+    kit.servo[15].angle = 0
+    kit.servo[14].angle = 160
+    time.sleep(1)
+    kit.servo[1].angle = 15
+    kit.servo[2].angle = 140
+    time.sleep(1)
+    #forearms
+    kit.servo[3].angle = 100
+    kit.servo[4].angle = 80
+    kit.servo[13].angle = 100
+    kit.servo[12].angle = 80
+    time.sleep(1)
+    #shoulders
+    kit.servo[5].angle = 45
+    kit.servo[6].angle = 140
+    kit.servo[10].angle = 140
+    kit.servo[11].angle = 40
+
+def low(a):
+    #shoulders
+    kit.servo[5].angle = 100
+    kit.servo[6].angle = 90
+    kit.servo[10].angle = 100
+    kit.servo[11].angle = 85
+    time.sleep(1)
+    #forearms
+    kit.servo[3].angle = 80
+    kit.servo[4].angle = 80
+    kit.servo[13].angle = 85
+    kit.servo[12].angle = 90
+    time.sleep(1)
+    #arms
+    kit.servo[1].angle = 15
+    kit.servo[2].angle = 180
+    kit.servo[15].angle = 0
+    kit.servo[14].angle = 170
+    time.sleep(1)
